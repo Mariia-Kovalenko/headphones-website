@@ -34,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
         burgerBtn.addEventListener('click', (e) => {
             if(e.target && (e.target.tagName === 'IMG')){
                 nav.style.right = 0;
+                bodyTag.style.overflow = 'hidden';
                 if(close.classList.contains('hide')){
                     close.classList.remove('hide');
                 }
@@ -42,6 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
         close.addEventListener('click', (e) => {
             if(e.target && (e.target.tagName === 'IMG')){
                 nav.style.right = '-100%';
+                bodyTag.style.overflow = '';
             }
             if(!close.classList.contains('hide')){
                 close.classList.add('hide');
