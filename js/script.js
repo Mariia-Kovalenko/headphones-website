@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function toggleMenu(burgerBtn, nav, close){
         burgerBtn.addEventListener('click', (e) => {
-            if(e.target && (e.target.tagName === 'IMG')){
+            if(e.target && (e.target.tagName === 'BUTTON')){
                 nav.style.right = 0;
                 bodyTag.style.overflow = 'hidden';
                 if(close.classList.contains('hide')){
