@@ -32,7 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function toggleMenu(burgerBtn, nav, close){
         burgerBtn.addEventListener('click', (e) => {
-            if(e.target && (e.target.tagName === 'BUTTON')){
+            console.log(e.target.tagName);
+            if(e.target && e.target.closest('img')){
                 nav.style.right = 0;
                 bodyTag.style.overflow = 'hidden';
                 if(close.classList.contains('hide')){
@@ -41,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
         close.addEventListener('click', (e) => {
-            if(e.target && (e.target.tagName === 'IMG')){
+            if(e.target && e.target.closest('img')){
                 nav.style.right = '-100%';
                 bodyTag.style.overflow = '';
             }
